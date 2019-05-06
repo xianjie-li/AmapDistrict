@@ -1,3 +1,6 @@
+# demo
+<https://iixianjie.github.io/pages/test2/>
+
 # 依赖
 依赖于aMap及3Dmap插件，和DistrictSearch插件，使用前须确保环境中存在。最简单的引入方式如下,请替换key为你的aMapkey。
 ```
