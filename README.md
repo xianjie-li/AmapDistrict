@@ -12,12 +12,14 @@
 ```
 # 构造器
 AreaMap(options)  
+```
 options: *<obj>  
   el:  *<str>  实例化map用的容器id  
   areaName:  *<str>  用于搜索地区的区域名，如贵阳市、上海市。  
   filterAreaRegExp: *<RegExp>  当出现如同名的区时，例如查询白云区会同时查到贵阳的白云区和广东的白云区，需要使用对应区的行政编号前缀进行匹配。  
   zooms: <num[min, max]>   地图允许的缩放区间  
-  zoom: <num>   默认缩放级别  
+  zoom: <num>   默认缩放级别
+```
 
 ```js
 let areaMap = new AreaMap({
