@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>title</title>
+    <style>
+      body {
+        background-color: #fff;
+      }
+
+      #container {
+        width: 800px;
+        height: 800px;
+        background-color: transparent !important; /* 地图背景透明 */
+      }
+
+      #container canvas.amap-layer {
+        background-color: transparent; /* 地图背景透明 */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container"></div>
+    <script
+      type="text/javascript"
+      src="https://webapi.amap.com/maps?v=1.4.14&key=2f86791f52fd930b054e74c383cd016f&plugin=Map3D,AMap.DistrictSearch"
+    ></script>
+    <script src="https://webapi.amap.com/ui/1.0/main.js?v=1.0.11"></script>
+    <script src="./AreaMap.js"></script>
+    <script>
+      let areaMap = new AreaMap({
+        el: 'container',
+        areaName: '贵阳市',
+        filterAreaRegExp: /^52/,
+      });
+
+      areaMap
+        .on('areaClick', function(arg) {
+          console.log('areaClick', arg);
+        })
+        .on('childrensChange', function(arg) {
+          console.log('childrensChange', arg);
+        });
+
+        
+    </script>
+  </body>
+</html>
