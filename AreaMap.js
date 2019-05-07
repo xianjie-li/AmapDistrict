@@ -154,6 +154,7 @@ class AreaMap {
     map.setFeatures(['bg', 'point']);
 
     this.areaHeightLight();
+    this.emit('finish');
   }
 
   // 设置地图中心到指定位置，并将缩放等级由预设提升至0.5,reset为true时，使用预设缩放等级
