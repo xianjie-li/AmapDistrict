@@ -48,21 +48,52 @@
           console.log('childrensChange', arg);
         })
         .on('finish', function() {
-          Array.from({ length: 200 }).forEach(v => {
+          Array.from({ length: 10 }).forEach(v => {
             var center = areaMap.areaCenter.map(v => {
               var rand = Math.random();
               var _rand = Math.random();
               return rand > 0.5 ? (v + _rand) : (v - _rand)
             })
-            console.log(center);
             var marker = new AMap.Marker({
               position: center,
               offset: new AMap.Pixel(-10, -10),
-              icon: './pointer1.png', // 添加 Icon 图标 URL
-              title: 'xx',
+              icon: 'https://raw.githubusercontent.com/Iixianjie/AmapDistrict/master/img/pointer1.png', // 添加 Icon 图标 URL
+              title: '实践中心',
               map: areaMap.map
             });
           });
+
+          Array.from({ length: 100 }).forEach(v => {
+            var center = areaMap.areaCenter.map(v => {
+              var rand = Math.random();
+              var _rand = Math.random();
+              return rand > 0.5 ? (v + _rand) : (v - _rand)
+            })
+            var marker = new AMap.Marker({
+              position: center,
+              offset: new AMap.Pixel(-10, -10),
+              icon: 'https://raw.githubusercontent.com/Iixianjie/AmapDistrict/master/img/pointer2.png', // 添加 Icon 图标 URL
+              title: '实践站',
+              map: areaMap.map
+            });
+          });
+
+          Array.from({ length: 400 }).forEach(v => {
+            var center = areaMap.areaCenter.map(v => {
+              var rand = Math.random();
+              var _rand = Math.random();
+              return rand > 0.5 ? (v + _rand) : (v - _rand)
+            })
+            var marker = new AMap.Marker({
+              position: center,
+              offset: new AMap.Pixel(-10, -10),
+              icon: 'https://raw.githubusercontent.com/Iixianjie/AmapDistrict/master/img/pointer3.png', // 添加 Icon 图标 URL
+              title: '实践所',
+              map: areaMap.map
+            });
+          });
+
+
         });
     </script>
   </body>
