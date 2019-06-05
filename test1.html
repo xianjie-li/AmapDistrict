@@ -36,8 +36,9 @@
     <script>
       let areaMap = new AreaMap({
         el: 'container',
-        areaName: '贵阳市',
-        filterAreaRegExp: /^52/
+        areaName: '贵州省',
+        filterAreaRegExp: /^52/,
+        zooms: [5, 18]
       });
 
       areaMap
@@ -48,50 +49,50 @@
           console.log('childrensChange', arg);
         })
         .on('finish', function() {
-          Array.from({ length: 10 }).forEach(v => {
-            var center = areaMap.areaCenter.map(v => {
-              var rand = Math.random();
-              var _rand = Math.random();
-              return rand > 0.5 ? (v + _rand) : (v - _rand)
-            })
-            var marker = new AMap.Marker({
-              position: center,
-              offset: new AMap.Pixel(-10, -10),
-              icon: 'https://raw.githubusercontent.com/Iixianjie/AmapDistrict/master/img/pointer1.png', // 添加 Icon 图标 URL
-              title: '实践中心',
-              map: areaMap.map
-            });
-          });
+          // Array.from({ length: 10 }).forEach(v => {
+          //   var center = areaMap.areaCenter.map(v => {
+          //     var rand = Math.random();
+          //     var _rand = Math.random();
+          //     return rand > 0.5 ? (v + _rand) : (v - _rand)
+          //   })
+          //   var marker = new AMap.Marker({
+          //     position: center,
+          //     offset: new AMap.Pixel(-10, -10),
+          //     icon: 'https://raw.githubusercontent.com/Iixianjie/AmapDistrict/master/img/pointer1.png', // 添加 Icon 图标 URL
+          //     title: '实践中心',
+          //     map: areaMap.map
+          //   });
+          // });
 
-          Array.from({ length: 100 }).forEach(v => {
-            var center = areaMap.areaCenter.map(v => {
-              var rand = Math.random();
-              var _rand = Math.random();
-              return rand > 0.5 ? (v + _rand) : (v - _rand)
-            })
-            var marker = new AMap.Marker({
-              position: center,
-              offset: new AMap.Pixel(-10, -10),
-              icon: 'https://raw.githubusercontent.com/Iixianjie/AmapDistrict/master/img/pointer2.png', // 添加 Icon 图标 URL
-              title: '实践站',
-              map: areaMap.map
-            });
-          });
+          // Array.from({ length: 100 }).forEach(v => {
+          //   var center = areaMap.areaCenter.map(v => {
+          //     var rand = Math.random();
+          //     var _rand = Math.random();
+          //     return rand > 0.5 ? (v + _rand) : (v - _rand)
+          //   })
+          //   var marker = new AMap.Marker({
+          //     position: center,
+          //     offset: new AMap.Pixel(-10, -10),
+          //     icon: 'https://raw.githubusercontent.com/Iixianjie/AmapDistrict/master/img/pointer2.png', // 添加 Icon 图标 URL
+          //     title: '实践站',
+          //     map: areaMap.map
+          //   });
+          // });
 
-          Array.from({ length: 400 }).forEach(v => {
-            var center = areaMap.areaCenter.map(v => {
-              var rand = Math.random();
-              var _rand = Math.random();
-              return rand > 0.5 ? (v + _rand) : (v - _rand)
-            })
-            var marker = new AMap.Marker({
-              position: center,
-              offset: new AMap.Pixel(-10, -10),
-              icon: 'https://raw.githubusercontent.com/Iixianjie/AmapDistrict/master/img/pointer3.png', // 添加 Icon 图标 URL
-              title: '实践所',
-              map: areaMap.map
-            });
-          });
+          // Array.from({ length: 400 }).forEach(v => {
+          //   var center = areaMap.areaCenter.map(v => {
+          //     var rand = Math.random();
+          //     var _rand = Math.random();
+          //     return rand > 0.5 ? (v + _rand) : (v - _rand)
+          //   })
+          //   var marker = new AMap.Marker({
+          //     position: center,
+          //     offset: new AMap.Pixel(-10, -10),
+          //     icon: 'https://raw.githubusercontent.com/Iixianjie/AmapDistrict/master/img/pointer3.png', // 添加 Icon 图标 URL
+          //     title: '实践所',
+          //     map: areaMap.map
+          //   });
+          // });
 
 
         });
